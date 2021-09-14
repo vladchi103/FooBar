@@ -1,79 +1,18 @@
-<style>
-    body {
-        background-color: rgb(195, 250, 241);
-    }
-    
-    ul {
-        background-color: aqua;
-        border-radius: 20px;
-        box-shadow: 0.5px 0.5px rgba(0, 0, 255, 0.459);
-        max-width: 150px;
-    }
-    
-    li {
-        background-color: rgba(95, 148, 184, 0.514);
-        border-radius: 5px;
-        max-width: 56px;
-        box-shadow: 0.3px 0.3px 0.3px 0.3px rgba(0, 0, 255, 0.459);
-        font-family: 'Courier New', Courier, monospace;
-    }
-    
-    input {
-        border-radius: 5px;
-        background-color: aliceblue;
-    }
-</style>
+<head>
+    <title>Foo Bar</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
 
 <body>
-    <input type="text" id="Name" class="form-control form-control-alternative" placeholder="Number" onchange="myFunction(event)">
-    <div id="foo"></div>
-</body>
-
-<script>
-    var input = document.getElementById('Name');
-
+    <div class="inputDiv">
+        <input type="text" id="Name" class="form-control form-control-alternative" placeholder="Number" >
+        <button type="button" onclick="myFunction(event)">Display with for</button>
+        <button type="button" onclick="myFunctionWithWhile(event)">Display with while</button>
+        <button type="button" onclick="myFunctionRecursive(event)">Display with recursive</button>
+        <button type="button" onclick="myFunctionWithArrays(event)">Display with arrays</button>
     
-
-    var myFunction = function(e) {
-
-        let numbers = [];
-
-        var n = input.value;
-
-        for (let i = 1; i <= n; i++) {
-
-            let text = "";
-
-            if (i % 2 === 0 && i % 3 === 0) {
-                text = "foobar";
-            } else if (i % 2 === 0) {
-                text = "foo";
-            } else {
-                text = (i % 3 === 0 ? "bar" : i);
-            }
-
-            numbers.push(text);
-
-        }
-
-
-
-
-        document.getElementById('foo').appendChild(makeUL(numbers));
-
-    }
-
-    function makeUL(array) {
-        var list = document.createElement('ul');
-
-        for (var i = 0; i < array.length; i++) {
-            var item = document.createElement('li');
-
-            item.appendChild(document.createTextNode(array[i]));
-
-            list.appendChild(item);
-        }
-
-        return list;
-    }
-</script>
+        <div id="foo"></div>
+    </div>
+    <script src="script.js"></script>
+</body>

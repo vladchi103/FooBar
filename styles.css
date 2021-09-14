@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(195, 250, 241);
+}
+
+ul {
+    background-color: aqua;
+    border-radius: 20px;
+    box-shadow: 0.5px 0.5px rgba(0, 0, 255, 0.459);
+    max-width: 150px;
+}
+
+li {
+    background-color: rgba(95, 148, 184, 0.514);
+    border-radius: 5px;
+    max-width: 56px;
+    box-shadow: 0.3px 0.3px 0.3px 0.3px rgba(0, 0, 255, 0.459);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+button {
+    border-radius: 5px;
+    background-color: aliceblue;
+
+}
